@@ -11,7 +11,7 @@ export default class Item {
   get template() {
     return  /*html*/`
     <div class="col-4 border border-warning rounded shadow">
-      <h1>${this.name}</h1>
+      <h3>${this.name}</h3>
       <h5>Description :</h5>
       <dl>
         ${this.description}
@@ -24,6 +24,7 @@ export default class Item {
       <dl>
         ${this.amount}
       </dl>
+      <button class="btn btn-danger" onclick="app.itemController.buy('${this.name}')">BUY ${this.name}</button>
     </div>
     `
   } 

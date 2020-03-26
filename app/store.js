@@ -37,7 +37,7 @@ let _state = {
     })
   ],
   /** @type {Item[]} */
-  myitems: [],
+  myItems: [],
   quarter: 0
 };
 

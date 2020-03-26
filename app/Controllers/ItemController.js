@@ -7,13 +7,24 @@ let _drawItem = function () {
   document.getElementById("itemDraw").innerHTML = template
 }
 
+let _drawQuarters = function() {
+  document.getElementById('quarterCount').innerHTML = _store.State.quarter.toString();
+}
+
 export default class ItemController {
   constructor() {
     _drawItem()
   }
 
+   buy(itemName) {
+     _itemService.buy(itemName);
+     _drawItem()
+     _drawQuarters()
+   }
+
   addQuarter() {
     _itemService.addQuarter();
+    _drawQuarters()
   }
 
 }
