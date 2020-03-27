@@ -8,6 +8,18 @@ export default class Item {
     this.amount = data.amount
   }
 
+  get purchasedTemplate(){
+    return /*html*/ `
+    <div class="col-4 border border-success rounded shadow">
+    <h3>${this.name}</h3>
+    <h5>Description :</h5>
+    <dl>
+      ${this.description}
+    </dl>
+  </div>
+    `
+  }
+
   get template() {
     return  /*html*/`
     <div class="col-4 border border-warning rounded shadow">
